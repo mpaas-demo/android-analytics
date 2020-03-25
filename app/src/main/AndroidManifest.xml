@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mpaas.aar.demo.analytics">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".AnalyticsApplication"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!--日志的加密公钥-->
+        <meta-data
+            android:name="setting.logging.encryption.pubkey"
+            android:value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCpffOiYcozIfgIiaOPWsmfktv7Sl/9Af3mIgYz7vkTXoGq4iMN+t5BLV6KjddVEI/9oLtAYV8qx7FhFrUoi3smcYfX35ETPUiHi1gLizeXKVSRYhIm2kiDF5lGfDgcS7uJZvmKjbdYy/RphnH+WQvQyeEH+4rjYSkdhIRE2W52BwIDAQAB" />
+
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AnalyticsActivity" />
+        <activity android:name=".AutomationActivity" />
+
+        <!--日志上传所用的 service-->
+        <service
+            android:name="com.alipay.mobile.common.logging.process.LogServiceInToolsProcess"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":tools" />
+
+        <!--日志诊断相关-->
+        <service
+            android:name="com.alipay.mobile.logmonitor.ClientMonitorService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":push" />
+
+    </application>
+
+</manifest>

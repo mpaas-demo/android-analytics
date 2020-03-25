@@ -1,0 +1,2 @@
+include ':analytics-build'
+project(':analytics-build').projectDir = new File('app')
