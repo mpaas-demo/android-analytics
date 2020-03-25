@@ -1,4 +1,4 @@
-本 demo 为移动分析单组件 demo，clone 后直接运行工程即可。
+本 demo 为 [移动分析](https://help.aliyun.com/document_detail/49562.html?spm=a2c4g.11186623.6.868.2d111612Hb5yQ7) 单组件 demo，clone 后直接运行工程即可。
 
 ### 控制台环境
 
