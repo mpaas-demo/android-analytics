@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alipay.mobile.framework.app.ui.BaseAppCompatActivity;
 import com.mpaas.mas.adapter.api.MPLogger;
 
 import java.util.HashMap;
@@ -19,7 +20,7 @@ import java.util.Random;
  * Created by xingcheng on 2018/7/27.
  */
 
-public class AnalyticsActivity extends AppCompatActivity {
+public class AnalyticsActivity extends BaseAppCompatActivity {
 
     private static final String TAG = "AnalyticsActivity";
     private String userId;
